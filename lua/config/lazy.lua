@@ -35,9 +35,9 @@ end
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    { "folke/tokyonight.nvim", config = function() vim.cmd.colorscheme "tokyonight" end },
+    { "Mofiqul/vscode.nvim", config = function() vim.cmd.colorscheme "vscode" end },
     {import = "config.plugins"}
   },
 })
 
-ColorMyPencils()
+-- ColorMyPencils()

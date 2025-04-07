@@ -23,9 +23,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 function ColorMyPencils(color)
-  color = color or "tokyonight"  -- Default to 'rose-pine' colorscheme
+  color = color or "aura-dark"  -- Default to 'rose-pine' colorscheme
   vim.cmd.colorscheme(color)
-  
+
   -- Set transparency for Normal background
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })  -- For non-current windows
@@ -35,7 +35,16 @@ end
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    { "Mofiqul/vscode.nvim", config = function() vim.cmd.colorscheme "vscode" end },
+    -- { "baliestri/aura-theme", config = function() vim.cmd.colorscheme "aura-dark" end },
+    {
+      "baliestri/aura-theme",
+      lazy = false,
+      priority = 1000,
+      config = function(plugin)
+	vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+	vim.cmd([[colorscheme aura-dark]])
+      end
+    },
     {import = "config.plugins"}
   },
 })

@@ -26,12 +26,12 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
 	{
-	    "dgox16/oldworld.nvim",
+	    "catppuccin/nvim",
 	    lazy = false,
 	    priority = 1000,
 	    config = function(plugin)
 		vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-		vim.cmd([[colorscheme oldworld]])
+		vim.cmd([[colorscheme catppuccin-mocha]])
 	    end
 	},
 	{ import = "config.plugins" }

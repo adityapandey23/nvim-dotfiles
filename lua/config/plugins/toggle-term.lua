@@ -7,9 +7,9 @@ return {
         direction = "float", -- make it an overlay box
       })
 
-      vim.keymap.set("n", "to", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true }) -- open/toggle
+      vim.keymap.set("n", "<space>to", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true }) -- open/toggle
      -- Close with 'tc' (terminal mode)
-      vim.keymap.set("t", "tc", [[<C-\><C-n><cmd>ToggleTermToggleAll<CR>]], { noremap = true, silent = true })
+      vim.keymap.set("t", "<space>tc", [[<C-\><C-n><cmd>ToggleTermToggleAll<CR>]], { noremap = true, silent = true })
     end,
   }
 }

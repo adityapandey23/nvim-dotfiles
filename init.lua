@@ -7,6 +7,10 @@ vim.opt.shiftwidth = 2
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
+vim.keymap.set("n", "<space>me", ":e ./<CR>")
+-- For Going into a definition and coming back
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
+vim.keymap.set("n", "gb", "<C-o>", { noremap = true, silent = true })
 
 -- Tranparency
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

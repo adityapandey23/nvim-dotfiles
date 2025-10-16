@@ -26,12 +26,12 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
 	{
-	    "catppuccin/nvim",
+	    "folke/tokyonight.nvim",
 	    lazy = false,
 	    priority = 1000,
 	    config = function(plugin)
 		vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-		vim.cmd([[colorscheme catppuccin-mocha]])
+		vim.cmd([[colorscheme tokyonight]])
 	    end
 	},
 	{ import = "config.plugins" }
